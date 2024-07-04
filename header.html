@@ -1,0 +1,163 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    height: 74px;
+    overflow: hidden;
+    background-color: white;
+  }
+  #header-logo {
+    flex: 1;
+    animation: moveText 8s 1, moveTextAfter 9s infinite 8s;
+    overflow: hidden;
+  }
+  #header-logo img {
+    height: 24px;
+  }
+  #header-notify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 74px;
+    width: 80px;
+    z-index: 1000;
+  }
+  .header-notify-btn {
+    font-size: 28px;
+    border-radius: 100%;
+    color: white;
+    animation: shake 0.5s infinite;
+  }
+  #header-notify-bg-btn {
+    cursor: pointer;
+    position: absolute;
+    background-color: #ff7100;
+    padding: 12px;
+    border-radius: 100%;
+  }
+  #notify-btn-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    color: white;
+    background-color: black;
+    animation: count 2s infinite;
+    cursor: pointer;
+  }
+
+  #header-notify-bg-btn:hover {
+    animation: notifyHover 2s infinite;
+  }
+
+  @keyframes notifyHover {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-8px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  @keyframes moveText {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes moveTextAfter {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+  @keyframes count {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+</style>
+
+<header>
+  <div id="header-logo">
+    <img src="https://www.likelion.edu.vn/logo-black.svg" alt="helo" />
+  </div>
+  <div id="header-notify">
+    <div id="header-notify-bg-btn">
+      <svg
+        class="header-notify-btn"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M12 1a2 2 0 0 0-1.98 2.284A7.003 7.003 0 0 0 5 10v8H4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2h-1v-8a7.003 7.003 0 0 0-5.02-6.716A2 2 0 0 0 12 1m2 21a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1"
+          clip-rule="evenodd"
+        />
+      </svg>
+      <span id="notify-btn-count">3</span>
+    </div>
+  </div>
+</header>
