@@ -14,6 +14,40 @@
     align-items: center;
   }
 
+  .translate-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-toggle {
+    position: relative;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .btn-toggle:has(input#toggle:checked) {
+    transform: rotate(180deg);
+  }
+
+  .translate-box:has(input#toggle:checked) {
+    flex-direction: column;
+  }
+
+  .sidebar:has(input#toggle:checked) {
+    width: 80px;
+  }
+
   .sidebar .header img {
     width: 40px;
     height: 40px;
@@ -100,16 +134,12 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   div.menu {
     overflow: auto;
     height: 300px;
-  }
-
-  .sidebar:has(input#toggle:checked) {
-    width: 50px;
   }
 
   .sidebar .item {
@@ -118,63 +148,68 @@
 </style>
 
 <div class="sidebar">
-  <div>
+  <div class="translate-box">
     <div class="header">
-      <img src="https://via.placeholder.com/40" alt="Avatar" />
+      <img src="./imgs/avatar.png" alt="Avatar" />
       <h2>widelab</h2>
-      <input type="checkbox" id="toggle" />
     </div>
-    <div class="menu">
-      <div class="item">
-        <i class="fas fa-inbox"></i>
-        <span>Inbox</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-bell"></i>
-        <span>Activity</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-calendar-alt"></i>
-        <span>Schedule</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-folder"></i>
-        <span>Documents</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-cog"></i>
-        <span>Settings</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Logout</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Logout</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Logout</span>
-      </div>
-      <div class="item">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Logout</span>
-      </div>
+
+    <div class="btn-toggle">
+      <img src="./icons/arrowToggle.svg" alt="toggle" />
+      <input type="checkbox" id="toggle" />
     </div>
   </div>
 
-  <div class="footer">
-    <div class="info">
-      <img src="https://via.placeholder.com/40" alt="Sandra Marx" />
-      <div>
-        <p class="name">Hien Phan</p>
-        <p class="email">hienphan3107@gmail.com</p>
-      </div>
+  <div class="menu">
+    <div class="item">
+      <i class="fas fa-inbox"></i>
+      <span>Inbox</span>
     </div>
-    <div class="actions">
-      <button>Update App</button>
-      <button>Logout</button>
+    <div class="item">
+      <i class="fas fa-bell"></i>
+      <span>Activity</span>
     </div>
+    <div class="item">
+      <i class="fas fa-calendar-alt"></i>
+      <span>Schedule</span>
+    </div>
+    <div class="item">
+      <i class="fas fa-folder"></i>
+      <span>Documents</span>
+    </div>
+    <div class="item">
+      <i class="fas fa-cog"></i>
+      <span>Settings</span>
+    </div>
+    <div class="item">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </div>
+    <div class="item">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </div>
+    <div class="item">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </div>
+    <div class="item">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="info">
+    <img src="https://via.placeholder.com/40" alt="Sandra Marx" />
+    <div>
+      <p class="name">Hien Phan</p>
+      <p class="email">hienphan3107@gmail.com</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button>Update App</button>
+    <button>Logout</button>
   </div>
 </div>
