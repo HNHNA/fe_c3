@@ -1,24 +1,132 @@
 <style>
-  h2 {
+  .sidenews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    max-height: 400px;
+    overflow: scroll;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 10px;
+    background-color: aliceblue;
+  }
+  .text {
+    margin: 0 10px;
+  }
+  h3 {
     font-size: 18px;
   }
+  .image img {
+    width: 100px;
+    height: 100px;
 
-  li {
-    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .description p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
   }
 </style>
 <div>
-  <h2 class="title">Cool CSS Grid CodePens</h2>
-  <ol class="list-info">
-    <li class="item">House floor plan</li>
-    <li class="item">Web comic</li>
-    <li class="item">News paper layout</li>
-    <li class="item">Monopoly board</li>
-    <li class="item">Pacman</li>
-    <li class="item">QR code</li>
-    <li class="item">Train Ticket</li>
-    <li class="item">A shelf!</li>
-    <li class="item">Periodic Table</li>
-    <li class="item">Excel spreadsheet</li>
-  </ol>
+  <div class="sidenews">
+    <div class="item">
+      <div class="image">
+        <img src="./images/sport.jpg" alt="" />
+      </div>
+      <div class="text">
+        <div class="title">
+          <h3>Thể thao</h3>
+        </div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            quis eveniet minima? Impedit facere at maiores velit praesentium,
+            nulla quas. Corporis, facilis laborum ad nulla repudiandae doloribus
+            optio porro aliquid?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="image">
+        <img src="./images/travel.jpg" alt="" />
+      </div>
+      <div class="text">
+        <div class="title">
+          <h3>Du lịch</h3>
+        </div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            quis eveniet minima? Impedit facere at maiores velit praesentium,
+            nulla quas. Corporis, facilis laborum ad nulla repudiandae doloribus
+            optio porro aliquid?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="image">
+        <img src="./images/money.jpg" alt="" />
+      </div>
+      <div class="text">
+        <div class="title">
+          <h3>Kinh tế</h3>
+        </div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            quis eveniet minima? Impedit facere at maiores velit praesentium,
+            nulla quas. Corporis, facilis laborum ad nulla repudiandae doloribus
+            optio porro aliquid?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image">
+        <img src="./images/money.jpg" alt="" />
+      </div>
+      <div class="text">
+        <div class="title">
+          <h3>Văn hóa - Nghệ thuật</h3>
+        </div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            quis eveniet minima? Impedit facere at maiores velit praesentium,
+            nulla quas. Corporis, facilis laborum ad nulla repudiandae doloribus
+            optio porro aliquid?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image">
+        <img src="./images/money.jpg" alt="" />
+      </div>
+      <div class="text">
+        <div class="title">
+          <h3>Thời sự</h3>
+        </div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            quis eveniet minima? Impedit facere at maiores velit praesentium,
+            nulla quas. Corporis, facilis laborum ad nulla repudiandae doloribus
+            optio porro aliquid?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
