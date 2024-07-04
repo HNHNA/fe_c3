@@ -1,15 +1,13 @@
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   header {
     display: flex;
     align-items: center;
     height: 74px;
     overflow: hidden;
     background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   #header-logo {
     flex: 1;
@@ -40,6 +38,7 @@
     background-color: #ff7100;
     padding: 12px;
     border-radius: 100%;
+    animation: shadowPulse 2s infinite;
   }
   #notify-btn-count {
     position: absolute;
@@ -133,6 +132,18 @@
     }
     100% {
       transform: translateY(0px);
+    }
+  }
+
+  @keyframes shadowPulse {
+    0% {
+      box-shadow: 0 4px 8px rgba(243, 111, 3, 0.913);
+    }
+    50% {
+      box-shadow: 0 8px 16px rgba(221, 106, 12, 0.776);
+    }
+    100% {
+      box-shadow: 0 4px 8px rgba(221, 103, 7, 0.804);
     }
   }
 </style>
