@@ -124,6 +124,11 @@
               document.querySelector(".sidebar").innerHTML = data;
               loadItemToSidebar();
             });
+            fetch("hotnews.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.querySelector("#hotnews").innerHTML = data;
+              loadItemToSidebar();
 
           fetch("header.html")
             .then((response) => response.text())
